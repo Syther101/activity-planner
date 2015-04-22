@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/RyanH/AndroidStudioProjects/Software2/ActivityPlanner/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/RyanH/AndroidStudioProjects/Software2/ActivityPlanner/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-cab47ed2e00b878bf3b4efcf01af13cbe069d01e.jar" />
+    </item>
+    <item
+        jar="/Users/RyanH/AndroidStudioProjects/Software2/ActivityPlanner/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/RyanH/AndroidStudioProjects/Software2/ActivityPlanner/app/build/intermediates/pre-dexed/debug/classes-ee3422ea5b5685e7ae45ececceb05dfa8a500dda.jar" />
+    </item>
+    <item
+        jar="/Users/RyanH/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/RyanH/AndroidStudioProjects/Software2/ActivityPlanner/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-8c55a7007046f6a48bbfdc932aa83dd4a0a99cec.jar" />
+    </item>
+    <item
+        jar="/Users/RyanH/AndroidStudioProjects/Software2/ActivityPlanner/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/RyanH/AndroidStudioProjects/Software2/ActivityPlanner/app/build/intermediates/pre-dexed/debug/classes-8c2e717af80e062cefab0b3fb41cb1309eab14c6.jar" />
+    </item>
+
+</items>
