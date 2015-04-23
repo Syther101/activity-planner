@@ -1,18 +1,17 @@
 package com.example.ryanh.activityplanner;
 
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
 import android.os.Bundle;
-import android.view.LayoutInflater;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
-import android.os.Build;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    private final String LOG_TAG = MainActivity.class.getSimpleName();
+    private final String SCHOOLFRAGMENT_TAG = "SFTAG";
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,7 +19,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new PlaceholderFragment())
+                    .add(R.id.container, new SchoolFragment(), SCHOOLFRAGMENT_TAG)
                     .commit();
         }
     }
@@ -45,22 +44,21 @@ public class MainActivity extends ActionBarActivity {
             return true;
         }
 
+        //TODO: Map button would be here if have time. Might be in fragment thou.
+
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * A placeholder fragment containing a simple view.
-     */
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        SchoolFragment ff = (SchoolFragment)getSupportFragmentManager()
+                .findFragmentByTag(SCHOOLFRAGMENT_TAG);
+        if (null != ff) {
+            ff.onSchoolChanged();
         }
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-            return rootView;
-        }
     }
+
+
 }

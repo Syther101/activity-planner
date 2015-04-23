@@ -39,7 +39,7 @@ public class ProgrammeDbHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_PROGRAMME_TABLE = "CREATE TABLE " +
                 ProgrammeEntry.TABLE_NAME + " (" +
                 ProgrammeEntry._ID + " INTEGER PRIMARY KEY," +
-                ProgrammeEntry.COLUMN_PROG_NAME + " TEXT NOT NULL, " +
+                ProgrammeEntry.COLUMN_PROG_NAME + " TEXT UNIQUE NOT NULL, " +
                 ProgrammeEntry.COLUMN_PROG_DESC + " TEXT NOT NULL, " +
                 ProgrammeEntry.COLUMN_PROG_DATE + " INTEGER NOT NULL, " +
                 ProgrammeEntry.COLUMN_SCHOOL_KEY + " INTEGER NOT NULL, " +
@@ -51,7 +51,7 @@ public class ProgrammeDbHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_ACTIVITY_TABLE = "CREATE TABLE " +
                 ActivityEntry.TABLE_NAME + " (" +
                 ActivityEntry._ID + " INTEGER PRIMARY KEY," +
-                ActivityEntry.COLUMN_ACTIVITY_NAME + " TEXT NOT NULL, " +
+                ActivityEntry.COLUMN_ACTIVITY_NAME + " TEXT UNIQUE NOT NULL, " +
                 ActivityEntry.COLUMN_ACTIVITY_DESC + " TEXT NOT NULL, " +
                 ActivityEntry.COLUMN_ACTIVITY_DATE + " INTEGER NOT NULL, " +
                 ActivityEntry.COLUMN_ACTIVITY_LOCATION + " TEXT NOT NULL, " +
@@ -70,4 +70,18 @@ public class ProgrammeDbHelper extends SQLiteOpenHelper {
 
     }
 
+    @Override
+    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
+        // This database is only a cache for online data, so its upgrade policy is
+        // to simply to discard the data and start over
+        // Note that this only fires if you change the version number for your database.
+        // It does NOT depend on the version number for your application.
+        // If you want to update the schema without wiping data, commenting out the next 2 lines
+        // should be your top priority before modifying this method.
+
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + SchoolEntry.TABLE_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + ProgrammeEntry.TABLE_NAME);
+        sqLiteDatabase.execSQL("DROP TABLE IF EXISTS " + ActivityEntry.TABLE_NAME);
+        onCreate(sqLiteDatabase);
+    }
 }
