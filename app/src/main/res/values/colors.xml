@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="uea_orange">#c67623</color>
+    <color name="uea_darkblue">#00597f</color>
+    <color name="uea_lightblue">#167eaa</color>
+    <color name="uea_offwhite">#e9e9e9</color>
+    <color name="uea_darkergrey">#c1c1c1</color>
+    <color name="red">#f65656</color>
+    <color name="green">#3ec169</color>
+</resources>
