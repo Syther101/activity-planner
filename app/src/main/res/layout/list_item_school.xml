@@ -11,9 +11,11 @@
 
 
         <TextView
-            android:id="@+id/list_item_program_textview"
+            android:id="@+id/list_item_school_textview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:textColor="@color/uea_offwhite"
             android:text="CMP Program"/>
 
 

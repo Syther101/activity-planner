@@ -88,6 +88,10 @@ public class ProgrammeContract {
             return CONTENT_URI.buildUpon().appendPath(school).build();
         }
 
+        public static Uri buildSchools() {
+            return CONTENT_URI;
+        }
+
         public static String getSchoolFromUri(Uri uri) {
             return uri.getPathSegments().get(1);
         }

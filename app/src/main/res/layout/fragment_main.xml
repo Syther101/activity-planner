@@ -1,14 +1,43 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity$PlaceholderFragment">
+    tools:context=".MainActivity$SchoolFragment"
+    android:background="@color/uea_lightblue">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/listview_schools"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearLayout"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Welcome to the University of East Anglia Open day activity planner."
+            android:id="@+id/textView"
+            android:layout_above="@+id/linearLayout"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/uea_offwhite"
+            />
+
+    </LinearLayout>
 
     <ListView
         android:id="@+id/listview_schools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"></ListView>
 
-</RelativeLayout>
+
+
+
+</LinearLayout>
